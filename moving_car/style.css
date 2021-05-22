@@ -1,0 +1,77 @@
+/* reset  */
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    overflow: hidden;
+}
+#bg{
+    width: 600vw;
+    height: 100vh;
+    background: url(img/background.jpg) repeat center center/cover;
+    animation: MoveCar linear 150s infinite;
+}
+
+.bush{
+    position: absolute;
+    width: 600vw;
+    height: 100%;
+    background: url(img/trees.png);
+    bottom: 240px;
+    background-repeat: repeat-x;
+    animation: MoveCar linear 50s infinite;
+}
+    
+
+
+.road{
+    width: 800vw;
+    height: 45vh;
+    background-image: url(img/track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0vh;
+    animation: MoveCar linear 10s infinite;
+}
+
+.car{
+    height: 140px;
+    width: 450px;
+    position: absolute;
+    background-image: url(img/car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 100px;
+    bottom:30vh;
+}
+
+#left img{
+    position: relative;
+    left: 61px;
+    top: 53px;
+    height: 90px;
+    animation: RotateWheel linear 0.16s infinite;
+}
+
+#right img{
+    position: relative;
+    left: 305px;
+    top: -40px;
+    height: 96px;
+    animation: RotateWheel linear 0.15s infinite;
+}
+
+@keyframes RotateWheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes MoveCar {
+    100%{
+        transform: translateX(-500vw);
+    }
+
+}
